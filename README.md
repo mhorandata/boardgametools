@@ -12,7 +12,6 @@ Sub Protect_worksheet()
 '
 
 ' 
-
 Protect_worksheet_unprotect Macro
 
 '
@@ -51,8 +50,12 @@ Sub timer()
 Assign the following to the "Set 1 Minute" button on Sheet "Timer":
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Sub Add_1_minute()
+
 '
-' Add_1_minute Macro
+
+'
+Add_1_minute Macro
+
 '
 
 '
@@ -70,8 +73,12 @@ End Sub
 Assign the following to the "Roll Dice" button on Sheet "Dice":
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Sub Roll_dice()
+
 '
-' Roll_dice Macro
+
+' 
+Roll_dice Macro
+
 '
 
 '
@@ -105,8 +112,12 @@ End Sub
 Assign the following to the "Flip Coin" button on Sheet "Coin_Flip":
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Sub Flip_coin()
+
 '
-' Roll_dice Macro
+
+' 
+Roll_dice Macro
+
 '
 
 '
