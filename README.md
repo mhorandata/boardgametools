@@ -1,12 +1,23 @@
 # boardgametools
-The VBA code for my Microsoft Excel Sheet to create a working timer, Dice, and coin flip. You will need to download the Worksheet and assign the buttons the correct Macros for this to work.
+The VBA code for my Microsoft Excel Sheet to create a working timer, Dice, and coin flip features. You will need to download the Worksheet from my Wix website and assign the buttons the correct Macros for this to work.
 
 To use this worksheet first download the Spreadsheet from my Wix website(See below). It will be under the Projects sections.
-
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 https://matthewloganhoran.wixsite.com/matthew-horan-s-data
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Add this Sub to your Macros:
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Sub Protect_worksheet()
+'
+' Protect_worksheet_unprotect Macro
+'
 
+'
+ActiveSheet.Protect
+End Sub
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Assign the following to the "Start timer" button on Sheet "Timer":
-
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
  Sub timer()
 
     ActiveSheet.Unprotect
@@ -22,10 +33,12 @@ Assign the following to the "Start timer" button on Sheet "Timer":
     ActiveSheet.Protect DrawingObjects:=True, Contents:=True, Scenarios:=True
     
  End Sub
-
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Assign the following to the "Set 1 Minute" button on Sheet "Timer":
-
-Add_1_minute Macro
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Sub Add_1_minute()
+'
+' Add_1_minute Macro
 '
 
 '
@@ -34,9 +47,9 @@ Add_1_minute Macro
     ActiveCell.FormulaR1C1 = "12:01:00 AM"
     ActiveSheet.Protect DrawingObjects:=True, Contents:=True, Scenarios:=True
 End Sub
-
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Assign the following to the "Roll Dice" button on Sheet "Dice":
-
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Sub Roll_dice()
 '
 ' Roll_dice Macro
@@ -56,9 +69,9 @@ Sub Roll_dice()
     Range("A1").Select
     ActiveSheet.Protect
 End Sub
-
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Assign the following to the "Flip Coin" button on Sheet "Coin_Flip":
-
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Sub Flip_coin()
 '
 ' Roll_dice Macro
@@ -74,3 +87,4 @@ Sub Flip_coin()
     Range("A1").Select
     ActiveSheet.Protect
 End Sub
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
