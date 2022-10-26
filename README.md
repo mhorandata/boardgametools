@@ -19,9 +19,10 @@ End Sub
 Assign the following to the "Start timer" button on Sheet "Timer":
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
  Sub timer()
-'
+ 
 
-'
+
+
 
     ActiveSheet.Unprotect
    
