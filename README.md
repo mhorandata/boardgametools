@@ -14,6 +14,7 @@ Sub Protect_worksheet()
 
 '
 ActiveSheet.Protect
+
 End Sub
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Assign the following to the "Start timer" button on Sheet "Timer":
@@ -29,11 +30,13 @@ Assign the following to the "Start timer" button on Sheet "Timer":
      interval = Now + TimeValue("00:00:01")
 
      If Range("L13").Value = 0 Then Call Protect_worksheet
+     
      If Range("L13").Value = 0 Then Exit Sub
 
      Range("L13") = Range("L13") - TimeValue("00:00:01")
 
      Application.OnTime interval, "timer"
+     
     ActiveSheet.Protect DrawingObjects:=True, Contents:=True, Scenarios:=True
     
  End Sub
@@ -47,9 +50,13 @@ Sub Add_1_minute()
 
 '
    ActiveSheet.Unprotect
+   
     Range("L13").Select
+    
     ActiveCell.FormulaR1C1 = "12:01:00 AM"
+    
     ActiveSheet.Protect DrawingObjects:=True, Contents:=True, Scenarios:=True
+    
 End Sub
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Assign the following to the "Roll Dice" button on Sheet "Dice":
@@ -61,17 +68,29 @@ Sub Roll_dice()
 
 '
     ActiveSheet.Unprotect
+    
     Columns("W:AG").Select
+    
     Selection.EntireColumn.Hidden = False
+    
     Range("Z3").Select
+    
     Selection.Copy
+    
     ActiveSheet.Paste
+    
     Application.CutCopyMode = False
+    
     Application.CommandBars("Office Clipboard").Visible = False
+    
     Columns("Y:AG").Select
+    
     Selection.EntireColumn.Hidden = True
+    
     Range("A1").Select
+    
     ActiveSheet.Protect
+    
 End Sub
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Assign the following to the "Flip Coin" button on Sheet "Coin_Flip":
@@ -83,12 +102,20 @@ Sub Flip_coin()
 
 '
     ActiveSheet.Unprotect
+    
     Range("Z3").Select
+    
     Selection.Copy
+    
     ActiveSheet.Paste
+    
     Application.CutCopyMode = False
+    
     Application.CommandBars("Office Clipboard").Visible = False
+    
     Range("A1").Select
+    
     ActiveSheet.Protect
+    
 End Sub
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
