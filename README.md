@@ -22,6 +22,7 @@ Assign the following to the "Start timer" button on Sheet "Timer":
 '
 
 '
+
     ActiveSheet.Unprotect
    
      interval = Now + TimeValue("00:00:01")
